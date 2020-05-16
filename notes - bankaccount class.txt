@@ -1,0 +1,62 @@
+1) Let's continue working with classes by creating 
+a Bank Account 
+that accepts a users name and contains a starting
+balance of 0. 
+
+set up class, name, balance 
+-Class will accept a username and balance
+
+The __init__ method serves as the constructor for our class, 
+allowing us to define attributes and 
+the initial state of each car that gets made.
+
+SELF - represents the instance of the class; 
+by using self you can access
+the attributes of the class; self only affects the class 
+being used; not all instances of the class
+
+****METHODS ALWAYS TAKE SELF SO THAT YOU CAN REFER
+BACK TO THE STATE OF YOUR ATTRIBUTE
+
+for name - the name will be passed through the class
+class Bank_Account instantiates the class - you will need 
+to pass the name here
+
+class BankAccount(object):
+    def __init__(self, object):    # self = the class we use in app
+        self.name = object    # name = what's passed through
+        self.balance = 0      # setting bal to zero
+
+-test to see name and balance in a dictionary
+# bank = BankAccount("Kyle")
+# print(bank.__dict__)
+# outputs: {'name': 'Kyle', 'balance': 0}
+
+2) Bank account has the ability to deposit funds
+***ALWAYS PASS SELF INTO METHODS, THIS IS HOW THE CLASS 
+YOU ARE MANIPULATING GETS REFERRED TO
+
+-so the we're taking in an amount, which changes
+the balance
+
+def make_deposit(self, amount):           # pass through amount
+    self.balance = amount         
+    # above sets the class you're using balance to the entered amount
+    # teacher used == and it worked but it doesn't for method
+
+3) Withdraw funds
+def withdraw(self, amount):
+    self.balance -= amount
+
+4) check if the balance is positive and if the withdrawl 
+amount is enough.
+def is_bal_pos(self, amount)
+    if self.balance - amount > 0:
+        print("You have a positive balance.")
+    if self.balance - amount < 1:
+        print("You do not have a positive balance.")
+
+
+
+
+    
